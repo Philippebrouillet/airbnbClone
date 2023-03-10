@@ -1,5 +1,6 @@
 import Image from "next/legacy/image";
 import React from "react";
+import imgbigcard from "../assets/4cj.webp";
 
 function LargeCard({ img, title, description, buttonText }) {
   return (
@@ -7,7 +8,7 @@ function LargeCard({ img, title, description, buttonText }) {
       <div className="relative h-96 min-w-[300px]">
         <Image
           alt="imgbigcard"
-          src={img}
+          src={imgbigcard}
           layout="fill"
           objectFit="cover"
           className="rounded-2xl"
