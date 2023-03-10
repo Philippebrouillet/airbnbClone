@@ -9,6 +9,7 @@ import LargeCard from "@/components/LargeCard";
 import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
+
 export default function Home({ exploreData, cardData }) {
   return (
     <>
@@ -40,8 +41,7 @@ export default function Home({ exploreData, cardData }) {
         <section>
           <h2 className="text-4xl font-semibold py-8"> Vivez n'importe où</h2>
 
-          <div className="flex space-x-3 overflow-scroll scrollbar-hide p-3 -ml-3">
-            {" "}
+          <div className="flex space-x-3 overflow-x-scroll p-3 -ml-3">
             {cardData.map((card, i) => (
               <MediumCard img={card.img} key={i} title={card.title} />
             ))}
