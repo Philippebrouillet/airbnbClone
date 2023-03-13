@@ -7,5 +7,5 @@ export const cardData = [
   { img: img1, title: "Escapades en plein air" },
   { img: img2, title: "Séjours uniques" },
   { img: img3, title: "Logement entier" },
-  { img: img4, title: "Animal autorisé" },
+  { img: img4, title: "Animaux autorisé" },
 ];
