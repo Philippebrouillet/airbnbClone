@@ -14,7 +14,7 @@ function Banner() {
       </div>
       <div className="absolute top-1/2 w-full text-center">
         <p className="text-sm sm:text-lg">
-          Vous ne savez pas ou vous voulez aller?{" "}
+          Vous ne savez pas ou aller? Parfait{" "}
         </p>
         <button className="text-purple-600 bg-white px-10 py-4 shadow-md rounded-full font-bold my-3 cursor-pointer hover:shadow-xl active:scale-90 transition duration-150">
           Je suis flexible

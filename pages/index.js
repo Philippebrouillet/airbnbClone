@@ -1,6 +1,7 @@
 import Head from "next/head";
+import { exploreData } from "@/exploreData";
+import { cardData } from "@/cardData";
 
-import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import SmallCard from "@/components/SmallCard";
@@ -8,9 +9,7 @@ import MediumCard from "@/components/MediumCard";
 import LargeCard from "@/components/LargeCard";
 import Footer from "@/components/Footer";
 
-const inter = Inter({ subsets: ["latin"] });
-
-export default function Home({ exploreData, cardData }) {
+export default function Home() {
   return (
     <>
       <Head>
@@ -41,34 +40,16 @@ export default function Home({ exploreData, cardData }) {
         <section>
           <h2 className="text-4xl font-semibold py-8"> Vivez n'importe où</h2>
 
-          <div className="flex space-x-3 overflow-x-scroll p-3 -ml-3">
+          <div className="flex space-x-3 overflow-x-auto  p-3 -ml-3">
             {cardData.map((card, i) => (
               <MediumCard img={card.img} key={i} title={card.title} />
             ))}
           </div>
         </section>
-        <LargeCard
-          img="https:/links.papareact.com/4cj"
-          title="The Greatest Outdoors"
-          buttonText="Get Inspired"
-        />
+        <LargeCard title="Les meilleures destinations" buttonText="Voir plus" />
       </main>
 
       <Footer />
     </>
   );
-}
-
-export async function getStaticProps() {
-  const exploreData = await fetch("https://www.jsonkeeper.com/b/4G1G").then(
-    (res) => res.json().catch((err) => console.log(err))
-  );
-
-  const cardData = await fetch("https://www.jsonkeeper.com/b/VHHT").then(
-    (res) => res.json()
-  );
-
-  return {
-    props: { exploreData, cardData },
-  };
 }

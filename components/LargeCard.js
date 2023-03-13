@@ -2,7 +2,7 @@ import Image from "next/legacy/image";
 import React from "react";
 import imgbigcard from "../assets/4cj.webp";
 
-function LargeCard({ img, title, description, buttonText }) {
+function LargeCard({ title, description, buttonText }) {
   return (
     <div className="relative py-16 cursor-pointer">
       <div className="relative h-96 min-w-[300px]">
