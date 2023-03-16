@@ -1,7 +1,6 @@
 import Head from "next/head";
-import { exploreData } from "@/exploreData";
-import { cardData } from "@/cardData";
-
+import { exploreData } from "@/Data/exploreData";
+import { cardData } from "@/Data/cardData";
 import Header from "@/components/Header";
 import Banner from "@/components/Banner";
 import SmallCard from "@/components/SmallCard";

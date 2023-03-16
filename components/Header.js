@@ -12,7 +12,7 @@ import "react-date-range/dist/theme/default.css";
 import { DateRangePicker } from "react-date-range";
 import Router from "next/router";
 
-function Header() {
+function Header({ placeHolder }) {
   const [searchInput, setSearchInput] = useState("");
   const [startDate, setStartData] = useState(new Date());
   const [endDate, setEndDate] = useState(new Date());
@@ -27,6 +27,17 @@ function Header() {
     startDate: startDate,
     endDate: endDate,
     key: "selection",
+  };
+  const Search = () => {
+    Router.push({
+      pathname: "/search",
+      query: {
+        location: searchInput,
+        startDate: startDate.toISOString(),
+        endDate: endDate.toISOString(),
+        numberOfGuest,
+      },
+    });
   };
 
   return (
@@ -49,7 +60,7 @@ function Header() {
           onChange={(e) => setSearchInput(e.target.value)}
           type="text"
           className="flex-grow pl-5 bg-transparent outline-none text-sm text-gray-600 placeholder-gray-400"
-          placeholder="Recherche"
+          placeholder={placeHolder || "Recherche"}
         />
         <SearchIcon className="hidden md:inline-flex h-8 bg-red-400 text-white rounded-full p-2 cursor-pointer md:mx-2" />
       </div>
@@ -93,10 +104,7 @@ function Header() {
             >
               Retour
             </button>
-            <button
-              onClick={() => Router.push("/search")}
-              className="flew-grow text-red-400"
-            >
+            <button onClick={Search} className="flew-grow text-red-400">
               Chercher
             </button>
           </div>

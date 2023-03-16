@@ -1,0 +1,18 @@
+{
+  searchData.map((marker) => (
+    <div key={marker.lat}>
+      <Marker
+        longitude={marker.long}
+        latitude={marker.lat}
+        offsetLeft={-20}
+        offsetTop={-10}
+      >
+        <p className="cursor-pointer text-2xl animate-bounce"></p>
+      </Marker>
+    </div>
+  ));
+}
+
+<Marker longitude={2.333333} latitude={48.866667}>
+  <Image src={point} width={30} height={30} alt="alo" />
+</Marker>

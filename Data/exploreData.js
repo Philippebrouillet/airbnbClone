@@ -1,11 +1,11 @@
-import litle2 from "./assets/litle2.webp";
-import litle3 from "./assets/litle3.webp";
-import litle4 from "./assets/litle4.webp";
-import litle5 from "./assets/litle5.webp";
-import litle6 from "./assets/litle6.webp";
-import litle7 from "./assets/litle7.webp";
-import litle8 from "./assets/litle8.webp";
-import litle1 from "./assets/toureiffel.jpeg";
+import litle2 from "../assets/litle2.webp";
+import litle3 from "../assets/litle3.webp";
+import litle4 from "../assets/litle4.webp";
+import litle5 from "../assets/litle5.webp";
+import litle6 from "../assets/litle6.webp";
+import litle7 from "../assets/litle7.webp";
+import litle8 from "../assets/litle8.webp";
+import litle1 from "../assets/toureiffel.jpeg";
 
 export const exploreData = [
   { img: litle1, distance: "20m", location: "Paris" },
